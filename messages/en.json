@@ -65,7 +65,7 @@
     "Learning":  {
                      "eyebrow":  "Learning \u0026 certifications",
                      "title":  "Learning that stays practical.",
-                     "description":  "I continue developing my skills through structured training, applied programs, and certifications across web development, AI, MLOps, cloud, game development, and professional readiness.",
+                     "description":  "I continue developing my skills through training programs, applied experiences, and certifications that help me expand my knowledge and explore new fields and technologies.",
                      "currentTitle":  "Currently learning",
                      "currentSubtitle":  "Active training programs",
                      "certificatesTitle":  "Certifications",
@@ -76,5 +76,22 @@
                      "viewAll":  "View all learning",
                      "closeCertificate":  "Close certificate",
                      "certificateLabel":  "Certificate"
-                 }
+                 },
+    "LearningPage":  {
+                         "back":  "Back to portfolio",
+                         "eyebrow":  "Learning journey",
+                         "title":  "Training, certifications, and continuous growth.",
+                         "description":  "A complete view of my learning journey, including training programs, certifications, and professional development experiences that continue to expand my knowledge and skills.",
+                         "activeCount":  "active programs",
+                         "certificateCount":  "certificates",
+                         "trainingTitle":  "Current training",
+                         "trainingSubtitle":  "Programs I am actively participating in",
+                         "certificationsTitle":  "Completed certifications",
+                         "certificationsSubtitle":  "Verified and completed learning",
+                         "inProgress":  "In progress",
+                         "started":  "Started",
+                         "viewCertificate":  "View certificate",
+                         "closeCertificate":  "Close certificate",
+                         "certificateLabel":  "Certificate"
+                     }
 }
