@@ -17,9 +17,17 @@
     "Language":  {
                      "switch":  "Switch to Arabic"
                  },
-    "Home":  {
-                 "eyebrow":  "Portfolio foundation",
-                 "title":  "Building digital products with clarity, depth, and purpose.",
-                 "description":  "The portfolio structure is ready. The full hero and project experience will be built in the next stages."
+    "Hero":  {
+                 "identity":  "Full-Stack Web Developer",
+                 "headlineStart":  "Building",
+                 "headlineAccent":  "digital products",
+                 "headlineEnd":  "from interface to backend.",
+                 "description":  "I build modern web applications with a strong focus on clean user experiences, maintainable architecture, reliable backend systems, and thoughtful AI integration.",
+                 "viewWork":  "View my work",
+                 "resume":  "View resume",
+                 "cardRoleLabel":  "Primary focus",
+                 "cardRole":  "Full-Stack Development",
+                 "cardStackLabel":  "Core stack",
+                 "photoAlt":  "Portrait of Mohamed Issam Qeshta"
              }
 }
