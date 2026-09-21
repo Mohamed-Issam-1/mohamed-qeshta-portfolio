@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070b10;
+  --background-elevated: #0a1017;
+  --surface: #0d131a;
+  --surface-elevated: #111922;
+  --surface-soft: #131d27;
+
+  --foreground: #f8fafc;
+  --foreground-muted: #94a3b8;
+  --foreground-subtle: #64748b;
+
+  --primary: #22d3ee;
+  --primary-strong: #06b6d4;
+  --primary-soft: rgba(34, 211, 238, 0.12);
+
+  --border: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(34, 211, 238, 0.28);
+
+  --selection: rgba(34, 211, 238, 0.28);
+
+  --shadow-soft:
+    0 20px 60px rgba(0, 0, 0, 0.24);
+
+  --shadow-glow:
+    0 0 50px rgba(34, 211, 238, 0.08);
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+}
+
+.light {
+  --background: #f8fafc;
+  --background-elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-elevated: #f1f5f9;
+  --surface-soft: #eaf1f7;
+
+  --foreground: #0f172a;
+  --foreground-muted: #475569;
+  --foreground-subtle: #64748b;
+
+  --primary: #0891b2;
+  --primary-strong: #0e7490;
+  --primary-soft: rgba(8, 145, 178, 0.1);
+
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(8, 145, 178, 0.24);
+
+  --selection: rgba(8, 145, 178, 0.18);
+
+  --shadow-soft:
+    0 20px 60px rgba(15, 23, 42, 0.08);
+
+  --shadow-glow:
+    0 0 50px rgba(8, 145, 178, 0.07);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-soft: var(--surface-soft);
+
   --color-foreground: var(--foreground);
+  --color-muted: var(--foreground-muted);
+  --color-subtle: var(--foreground-subtle);
+
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-arabic: var(--font-arabic);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(34, 211, 238, 0.065),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at 90% 18%,
+      rgba(14, 116, 144, 0.05),
+      transparent 28rem
+    ),
+    var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid var(--background);
+  border-radius: 999px;
+  background: var(--foreground-subtle);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.site-container {
+  width: min(100% - 2rem, 76rem);
+  margin-inline: auto;
+}
+
+.section-spacing {
+  padding-block: clamp(5rem, 10vw, 8rem);
+}
+
+.surface-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--foreground) 15%,
+    var(--primary) 55%,
+    var(--foreground) 92%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-geist-sans), Arial, sans-serif;
+}
+
+@media (max-width: 640px) {
+  .site-container {
+    width: min(100% - 1.25rem, 76rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
