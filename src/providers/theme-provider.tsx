@@ -1,6 +1,4 @@
-"use client";
-
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ThemeProvider as BaseThemeProvider } from "@teispace/next-themes";
 import type { ReactNode } from "react";
 
 interface ThemeProviderProps {
@@ -9,13 +7,14 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
-    <NextThemesProvider
+    <BaseThemeProvider
       attribute="class"
       defaultTheme="dark"
       enableSystem={false}
+      storage="local"
       disableTransitionOnChange
     >
       {children}
-    </NextThemesProvider>
+    </BaseThemeProvider>
   );
 }

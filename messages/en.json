@@ -1,0 +1,25 @@
+{
+    "Navigation":  {
+                       "work":  "Work",
+                       "about":  "About",
+                       "skills":  "Skills",
+                       "learning":  "Learning",
+                       "resume":  "Resume",
+                       "contact":  "Contact",
+                       "openMenu":  "Open navigation menu",
+                       "closeMenu":  "Close navigation menu"
+                   },
+    "Theme":  {
+                  "light":  "Switch to light mode",
+                  "dark":  "Switch to dark mode",
+                  "toggle":  "Toggle color theme"
+              },
+    "Language":  {
+                     "switch":  "Switch to Arabic"
+                 },
+    "Home":  {
+                 "eyebrow":  "Portfolio foundation",
+                 "title":  "Building digital products with clarity, depth, and purpose.",
+                 "description":  "The portfolio structure is ready. The full hero and project experience will be built in the next stages."
+             }
+}
