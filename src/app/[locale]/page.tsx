@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 
 import { Hero } from "@/components/sections/hero";
+import { SelectedWork } from "@/components/sections/selected-work";
 
 export default async function HomePage({
   params,
@@ -14,6 +15,7 @@ export default async function HomePage({
   return (
     <main className="pt-20">
       <Hero />
+      <SelectedWork />
     </main>
   );
 }

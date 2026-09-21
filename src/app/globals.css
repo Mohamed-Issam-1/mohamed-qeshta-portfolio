@@ -234,3 +234,15 @@ svg {
     opacity: 0.25;
   }
 }
+.project-visual-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.12)
+  );
+  opacity: 0.42;
+}

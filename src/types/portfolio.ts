@@ -50,17 +50,32 @@ export interface EducationItem {
 
 export interface Project {
   slug: string;
+
   title: string;
+  titleAr: string;
+
   category: string;
+  categoryAr: string;
+
   type: string;
+  typeAr: string;
+
   role: string;
+  roleAr: string;
+
   status: ProjectStatus;
   priority: ProjectPriority;
+
   description: string;
+  descriptionAr: string;
+
   technologies: string[];
+
   github?: string;
   liveDemo?: string;
   caseStudy?: string;
+  externalUrl?: string;
+
   image?: string;
 }
 
