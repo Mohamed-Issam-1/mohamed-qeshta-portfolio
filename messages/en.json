@@ -53,5 +53,13 @@
                   "locationLabel":  "Based in",
                   "gpaLabel":  "GPA",
                   "graduationLabel":  "Expected graduation"
-              }
+              },
+    "Skills":  {
+                   "eyebrow":  "Skills \u0026 technologies",
+                   "title":  "Tools I use to build.",
+                   "description":  "My strongest focus is full-stack web development, supported by experience across databases, AI and data projects, interface design, desktop applications, and other technologies.",
+                   "learningTitle":  "Still expanding the stack.",
+                   "learningDescription":  "I continue learning through projects, academic work, and structured training rather than treating the current stack as fixed.",
+                   "learningBadge":  "Always learning"
+               }
 }

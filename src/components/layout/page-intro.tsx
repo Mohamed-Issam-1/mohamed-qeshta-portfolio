@@ -23,6 +23,7 @@ export function PageIntro() {
         duration: 0.2,
         delay: 1.6,
       }}
+      dir="ltr"
       className="pointer-events-none fixed inset-0 z-[100]"
       aria-hidden="true"
     >
@@ -33,7 +34,7 @@ export function PageIntro() {
         className="absolute inset-y-0 left-0 w-1/2 border-r border-primary/15 bg-[#05080c]"
       >
         <div className="absolute right-8 top-1/2 -translate-y-1/2 font-mono text-[clamp(6rem,17vw,14rem)] font-light leading-none text-primary/80">
-          {"{"}
+          <span dir="ltr">{"{"}</span>
         </div>
       </motion.div>
 
@@ -44,7 +45,7 @@ export function PageIntro() {
         className="absolute inset-y-0 right-0 w-1/2 border-l border-primary/15 bg-[#05080c]"
       >
         <div className="absolute left-8 top-1/2 -translate-y-1/2 font-mono text-[clamp(6rem,17vw,14rem)] font-light leading-none text-primary/80">
-          {"}"}
+          <span dir="ltr">{"}"}</span>
         </div>
       </motion.div>
 
@@ -62,6 +63,7 @@ export function PageIntro() {
           times: [0, 0.18, 0.72, 1],
           ease: "easeOut",
         }}
+        dir="ltr"
         className="absolute inset-0 flex items-center justify-center"
       >
         <div className="flex items-baseline">

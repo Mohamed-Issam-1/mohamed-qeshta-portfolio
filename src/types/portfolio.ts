@@ -80,8 +80,14 @@ export interface Project {
 }
 
 export interface SkillGroup {
+  id: string;
+
   title: string;
   titleAr: string;
+
+  description: string;
+  descriptionAr: string;
+
   skills: string[];
 }
 
