@@ -93,15 +93,29 @@ export interface SkillGroup {
 
 export interface LearningItem {
   id: string;
+
   title: string;
+  titleAr: string;
+
   provider: string;
+  providerAr: string;
+
   type: LearningType;
   status: LearningStatus;
+
   startDate?: string;
   endDate?: string;
+
   duration?: string;
+  durationAr?: string;
+
+  description?: string;
+  descriptionAr?: string;
+
   skills?: string[];
-  certificateUrl?: string;
+
+  certificateImage?: string;
+  verificationUrl?: string;
 }
 
 export interface ExperienceItem {

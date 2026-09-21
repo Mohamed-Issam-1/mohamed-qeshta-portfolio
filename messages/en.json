@@ -61,5 +61,20 @@
                    "learningTitle":  "Still expanding the stack.",
                    "learningDescription":  "I continue learning through projects, academic work, and structured training rather than treating the current stack as fixed.",
                    "learningBadge":  "Always learning"
-               }
+               },
+    "Learning":  {
+                     "eyebrow":  "Learning \u0026 certifications",
+                     "title":  "Learning that stays practical.",
+                     "description":  "I continue developing my skills through structured training, applied programs, and certifications across web development, AI, MLOps, cloud, game development, and professional readiness.",
+                     "currentTitle":  "Currently learning",
+                     "currentSubtitle":  "Active training programs",
+                     "certificatesTitle":  "Certifications",
+                     "certificatesSubtitle":  "Selected completed learning",
+                     "inProgress":  "In progress",
+                     "started":  "Started",
+                     "viewCertificate":  "View certificate",
+                     "viewAll":  "View all learning",
+                     "closeCertificate":  "Close certificate",
+                     "certificateLabel":  "Certificate"
+                 }
 }
