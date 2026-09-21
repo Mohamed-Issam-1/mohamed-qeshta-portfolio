@@ -37,5 +37,21 @@
                          "github":  "View source",
                          "openProject":  "Open project",
                          "viewAll":  "Explore all projects"
-                     }
+                     },
+    "About":  {
+                  "eyebrow":  "About me",
+                  "title":  "I care about the whole product, not only the screen.",
+                  "paragraphOne":  "I am a Computer Science student and Full-Stack Web Developer based in Gaza, Palestine. My main focus is building web applications that connect thoughtful interfaces with reliable backend systems.",
+                  "paragraphTwo":  "I enjoy working across different parts of a product, from frontend architecture and user experience to APIs, databases, authentication, and practical AI integration.",
+                  "focusLabel":  "Current focus",
+                  "focusValue":  "Full-Stack Web Development",
+                  "focusDetail":  "Modern web applications built from interface to backend.",
+                  "educationLabel":  "Education",
+                  "approachLabel":  "How I build",
+                  "approachValue":  "Product-minded development",
+                  "approachDetail":  "Clear interfaces, maintainable code, reliable systems, and intentional technical decisions.",
+                  "locationLabel":  "Based in",
+                  "gpaLabel":  "GPA",
+                  "graduationLabel":  "Expected graduation"
+              }
 }

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/layout/header";
+import { PageIntro } from "@/components/layout/page-intro";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -64,6 +65,8 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} antialiased`}
     >
       <body>
+        <PageIntro />
+
         <NextIntlClientProvider>
           <ThemeProvider>
             <Header />
