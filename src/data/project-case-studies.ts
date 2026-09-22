@@ -346,8 +346,113 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
 
     outcomeAr:
       "نتج عن المشروع دراسة حالة UI/UX متكاملة للهاتف تشمل Wireframes وشاشات عالية الدقة وعناصر بصرية قابلة لإعادة الاستخدام وPrototype تفاعلي."
-  }
-];
+  },
+
+  {
+    slug: "olist-mlops",
+
+    overview:
+      "An end-to-end machine learning and MLOps project built around the Olist e-commerce dataset, moving from reproducible model development to a production-style inference system with versioned artifacts, model registry, APIs, containerization, automated testing, CI/CD, logging, and monitoring.",
+
+    overviewAr:
+      "مشروع متكامل في تعلم الآلة وMLOps يعتمد على بيانات Olist للتجارة الإلكترونية، وينتقل من تطوير نموذج قابل لإعادة الإنتاج إلى نظام inference بأسلوب إنتاجي يشمل إدارة إصدارات البيانات والـartifacts، وتسجيل النماذج، وواجهات API، والحاويات، والاختبارات الآلية، وCI/CD، والتسجيل والمراقبة.",
+
+    challenge:
+      "The main challenge was turning a notebook-based late-delivery prediction workflow into a reproducible inference system while preventing data leakage, separating training from serving, restoring versioned artifacts reliably, and handling performance changes across later chronological data.",
+
+    challengeAr:
+      "كان التحدي الأساسي هو تحويل مسار التنبؤ بتأخر التسليم من Notebooks إلى نظام inference قابل لإعادة الإنتاج، مع منع تسرب البيانات، وفصل التدريب عن التشغيل، واستعادة الـartifacts ذات الإصدارات بشكل موثوق، والتعامل مع تغير الأداء على البيانات الزمنية اللاحقة.",
+
+    roleDetails: [
+      "Built the machine learning workflow from data preparation and feature engineering through model training and evaluation.",
+      "Structured reusable Python modules for preprocessing, inference, model loading, prediction services, logging, and monitoring.",
+      "Integrated DVC for data and artifact versioning and MLflow for model tracking and registry workflows.",
+      "Built FastAPI and CLI inference interfaces that reuse fitted preprocessing objects and the registered model without retraining.",
+      "Containerized the system with Docker Compose and integrated automated quality checks, tests, and CI/CD."
+    ],
+
+    roleDetailsAr: [
+      "بناء مسار تعلم الآلة من تجهيز البيانات وهندسة الخصائص حتى تدريب النموذج وتقييمه.",
+      "تنظيم وحدات Python قابلة لإعادة الاستخدام للمعالجة المسبقة وinference وتحميل النموذج وخدمات التنبؤ والتسجيل والمراقبة.",
+      "دمج DVC لإدارة إصدارات البيانات والـartifacts وMLflow لتتبع النماذج وإدارتها داخل Model Registry.",
+      "بناء واجهات inference باستخدام FastAPI وCLI تعيد استخدام المعالجة المسبقة والنموذج المسجل دون إعادة التدريب.",
+      "تشغيل النظام باستخدام Docker Compose وربطه بفحوصات الجودة والاختبارات الآلية وCI/CD."
+    ],
+
+    features: [
+      "Late-delivery prediction for e-commerce orders",
+      "Chronological train, validation, and test workflow",
+      "Data validation with Great Expectations",
+      "DVC-managed datasets and model artifacts",
+      "MLflow Model Registry integration",
+      "Single and batch prediction through FastAPI",
+      "Command-line inference",
+      "Docker Compose multi-service startup",
+      "Runtime logging, service metrics, and prediction monitoring",
+      "Operational drift and alert rules"
+    ],
+
+    featuresAr: [
+      "التنبؤ بتأخر تسليم طلبات التجارة الإلكترونية",
+      "تقسيم زمني لبيانات التدريب والتحقق والاختبار",
+      "التحقق من البيانات باستخدام Great Expectations",
+      "إدارة البيانات وملفات النموذج باستخدام DVC",
+      "تكامل مع MLflow Model Registry",
+      "التنبؤ الفردي والجماعي عبر FastAPI",
+      "دعم inference من سطر الأوامر",
+      "تشغيل متعدد الخدمات باستخدام Docker Compose",
+      "تسجيل ومراقبة مؤشرات الخدمة والتنبؤات أثناء التشغيل",
+      "قواعد تشغيلية لاكتشاف الانحراف وإطلاق التنبيهات"
+    ],
+
+    technicalApproach: [
+      "PostgreSQL is used as the relational source for the Olist dataset before aggregation and machine learning preparation.",
+      "Training, validation, and test sets are split chronologically to better represent prediction on future orders.",
+      "Exploratory analysis and preprocessing fitting are restricted to training data to reduce leakage risk.",
+      "The selected Logistic Regression model and fitted preprocessing artifacts are reused during inference without retraining or refitting.",
+      "DVC versions large datasets and generated artifacts while MLflow manages model metadata and the registered production-style model.",
+      "Great Expectations validates incoming data before inference.",
+      "FastAPI exposes health, model information, prediction, batch prediction, and monitoring endpoints.",
+      "Docker Compose coordinates DVC restore, PostgreSQL, MLflow, model bootstrap, and the inference API.",
+      "GitHub Actions runs code-quality checks, artifact restoration, model bootstrap, automated tests, and Docker build steps."
+    ],
+
+    technicalApproachAr: [
+      "استخدام PostgreSQL كمصدر علائقي لبيانات Olist قبل عمليات التجميع وتجهيز بيانات تعلم الآلة.",
+      "تقسيم بيانات التدريب والتحقق والاختبار زمنيًا لمحاكاة التنبؤ على الطلبات المستقبلية بصورة أقرب للواقع.",
+      "حصر التحليل الاستكشافي وملاءمة المعالجة المسبقة على بيانات التدريب لتقليل مخاطر تسرب البيانات.",
+      "إعادة استخدام نموذج Logistic Regression المختار وملفات المعالجة المسبقة الملائمة أثناء inference دون إعادة التدريب أو الـfitting.",
+      "استخدام DVC لإدارة إصدارات البيانات والـartifacts وMLflow لإدارة معلومات النموذج والنموذج المسجل.",
+      "استخدام Great Expectations للتحقق من البيانات قبل تنفيذ inference.",
+      "توفير نقاط نهاية عبر FastAPI لفحص الصحة ومعلومات النموذج والتنبؤ الفردي والجماعي والمراقبة.",
+      "استخدام Docker Compose لتنسيق استعادة ملفات DVC وPostgreSQL وMLflow وتهيئة النموذج وخدمة API.",
+      "استخدام GitHub Actions لتشغيل فحوصات جودة الكود واستعادة الـartifacts وتهيئة النموذج والاختبارات وبناء Docker."
+    ],
+
+    challenges: [
+      "Handling an imbalanced late-delivery target without relying on accuracy as the primary model-selection metric.",
+      "Preventing leakage by keeping exploratory analysis and preprocessing fitting restricted to training data.",
+      "Managing weaker model generalization on the later chronological test period without tuning against the final test set.",
+      "Keeping training artifacts reproducible and portable without storing large generated files directly in Git.",
+      "Ensuring production-style inference remains independent from notebook execution and model retraining.",
+      "Coordinating multiple containerized services while preserving reliable startup and monitoring behavior."
+    ],
+
+    challengesAr: [
+      "التعامل مع عدم توازن فئات هدف تأخر التسليم دون الاعتماد على Accuracy كمقياس أساسي لاختيار النموذج.",
+      "منع تسرب البيانات من خلال قصر التحليل الاستكشافي وملاءمة المعالجة المسبقة على بيانات التدريب.",
+      "التعامل مع انخفاض قدرة النموذج على التعميم في فترة الاختبار الزمنية اللاحقة دون إعادة الضبط باستخدام بيانات الاختبار النهائية.",
+      "الحفاظ على قابلية إعادة إنتاج ونقل الـartifacts دون تخزين الملفات الكبيرة الناتجة مباشرة داخل Git.",
+      "إبقاء مسار inference منفصلًا عن تشغيل الـNotebooks وعن إعادة تدريب النموذج.",
+      "تنسيق عدة خدمات داخل الحاويات مع الحفاظ على تشغيل موثوق وسلوك مراقبة مستمر."
+    ],
+
+    outcome:
+      "The result is a reproducible production-style ML system that extends beyond model training into model serving and operations. The repository documents successful clean-clone validation, one-command container startup, API inference, persistent monitoring, and a test suite with 119 passing automated tests.",
+
+    outcomeAr:
+      "النتيجة هي نظام تعلم آلة قابل لإعادة الإنتاج بأسلوب إنتاجي يتجاوز تدريب النموذج إلى تشغيله وإدارته. يوثق المشروع نجاح التحقق من نسخة نظيفة للمستودع، وتشغيل الحاويات بأمر واحد، وinference عبر API، واستمرار بيانات المراقبة، وحزمة اختبارات تضم 119 اختبارًا آليًا ناجحًا."
+  }];
 
 export function getProjectCaseStudy(
   slug: string
