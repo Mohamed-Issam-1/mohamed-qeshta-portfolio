@@ -36,7 +36,8 @@
                          "description":  "مجموعة مختارة من المشاريع التي تعكس أسلوبي في تطوير البرمجيات، ودمج الذكاء الاصطناعي، وتصميم الواجهات، وبناء تجارب رقمية متكاملة.",
                          "github":  "عرض المصدر",
                          "openProject":  "فتح المشروع",
-                         "viewAll":  "استعرض جميع المشاريع"
+                         "viewAll":  "استعرض جميع المشاريع",
+                         "viewCaseStudy":  "دراسة المشروع"
                      },
     "About":  {
                   "eyebrow":  "عني",
@@ -134,6 +135,25 @@
                                          "mobile":  "الهاتف",
                                          "design":  "UI/UX",
                                          "planning":  "التخطيط"
-                                     }
-                     }
+                                     },
+                         "viewCaseStudy":  "دراسة المشروع"
+                     },
+    "ProjectCaseStudy":  {
+                             "back":  "العودة إلى المشاريع",
+                             "completed":  "مكتمل",
+                             "inProgress":  "قيد التطوير",
+                             "role":  "دوري",
+                             "projectType":  "نوع المشروع",
+                             "status":  "الحالة",
+                             "overview":  "نظرة عامة",
+                             "challenge":  "التحدي",
+                             "myRole":  "دوري في المشروع",
+                             "keyFeatures":  "الميزات الرئيسية",
+                             "technicalApproach":  "النهج التقني",
+                             "challenges":  "التحديات والقرارات",
+                             "outcome":  "النتيجة",
+                             "techStack":  "التقنيات المستخدمة",
+                             "github":  "GitHub",
+                             "openProject":  "فتح المشروع"
+                         }
 }

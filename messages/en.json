@@ -36,7 +36,8 @@
                          "description":  "A selection of projects that reflect how I approach software development, AI integration, interface design, and complete product experiences.",
                          "github":  "View source",
                          "openProject":  "Open project",
-                         "viewAll":  "Explore all projects"
+                         "viewAll":  "Explore all projects",
+                         "viewCaseStudy":  "View case study"
                      },
     "About":  {
                   "eyebrow":  "About me",
@@ -134,6 +135,25 @@
                                          "mobile":  "Mobile",
                                          "design":  "UI/UX",
                                          "planning":  "Planning"
-                                     }
-                     }
+                                     },
+                         "viewCaseStudy":  "View case study"
+                     },
+    "ProjectCaseStudy":  {
+                             "back":  "Back to projects",
+                             "completed":  "Completed",
+                             "inProgress":  "In development",
+                             "role":  "My role",
+                             "projectType":  "Project type",
+                             "status":  "Status",
+                             "overview":  "Overview",
+                             "challenge":  "The challenge",
+                             "myRole":  "My role",
+                             "keyFeatures":  "Key features",
+                             "technicalApproach":  "Technical approach",
+                             "challenges":  "Challenges \u0026 decisions",
+                             "outcome":  "Outcome",
+                             "techStack":  "Tech stack",
+                             "github":  "GitHub",
+                             "openProject":  "Open project"
+                         }
 }

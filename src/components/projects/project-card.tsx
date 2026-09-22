@@ -5,6 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import { useLocale, useTranslations } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
+import { getProjectCaseStudy } from "@/data/project-case-studies";
+
 import type { Project } from "@/types/portfolio";
 
 interface ProjectCardProps {
@@ -44,6 +47,10 @@ export function ProjectCard({
 
   const isInProgress =
     project.status === "in-progress";
+
+  const hasCaseStudy = Boolean(
+    getProjectCaseStudy(project.slug)
+  );
 
   return (
     <motion.article
@@ -145,10 +152,25 @@ export function ProjectCard({
           )}
         </div>
 
-        {(project.github ||
+        {(hasCaseStudy ||
+          project.github ||
           project.externalUrl ||
           project.liveDemo) && (
           <div className="mt-auto flex flex-wrap gap-3 pt-8">
+            {hasCaseStudy && (
+              <Link
+                href={`/projects/${project.slug}`}
+                className="focus-ring group/link inline-flex min-h-10 items-center gap-2 rounded-full border border-primary/30 bg-primary-soft px-4 py-2 text-xs font-semibold text-primary transition hover:border-primary/50"
+              >
+                {t("viewCaseStudy")}
+
+                <ArrowUpRight
+                  size={13}
+                  className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 rtl:group-hover/link:-translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </Link>
+            )}
             {project.github && (
               <a
                 href={project.github}

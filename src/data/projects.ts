@@ -49,8 +49,8 @@ export const projects: Project[] = [
 
     filter: "ai-data",
 
-    type: "Academic Project — Refactored for Portfolio",
-    typeAr: "مشروع أكاديمي — أعيد تنظيمه للبورتفوليو",
+    type: "Academic AI Project",
+    typeAr: "مشروع أكاديمي في الذكاء الاصطناعي",
 
     role: "Developer",
     roleAr: "المطور",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
 
     filter: "desktop",
 
-    type: "Academic Individual Project",
+    type: "Individual Academic Project",
     typeAr: "مشروع أكاديمي فردي",
 
     role: "Developer",
@@ -127,7 +127,7 @@ export const projects: Project[] = [
 
     filter: "design",
 
-    type: "Academic Individual Project",
+    type: "Individual Academic Project",
     typeAr: "مشروع أكاديمي فردي",
 
     role: "UI/UX Designer",
@@ -165,8 +165,8 @@ export const projects: Project[] = [
 
     filter: "web",
 
-    type: "Academic Project",
-    typeAr: "مشروع أكاديمي",
+    type: "Academic Database Project",
+    typeAr: "مشروع أكاديمي في قواعد البيانات",
 
     role: "Developer",
     roleAr: "المطور",
@@ -240,8 +240,8 @@ export const projects: Project[] = [
 
     filter: "mobile",
 
-    type: "Academic Project",
-    typeAr: "مشروع أكاديمي",
+    type: "Academic Database Project",
+    typeAr: "مشروع أكاديمي في قواعد البيانات",
 
     role: "Developer",
     roleAr: "المطور",
@@ -253,7 +253,7 @@ export const projects: Project[] = [
       "An Android application for searching and browsing YouTube content through an external API, built as a practical mobile development project.",
 
     descriptionAr:
-      "تطبيق أندرويد للبحث وتصفح محتوى YouTube من خلال API خارجي، تم تطويره كمشروع عملي في برمجة تطبيقات الهاتف.",
+      "تطبيق أندرويد للبحث وتصفح محتوى YouTube من خلال API خارجي، يركز على تكامل واجهات API وتطوير تطبيقات الهاتف.",
 
     technologies: [
       "Java",
@@ -391,10 +391,10 @@ export const projects: Project[] = [
     priority: "supporting",
 
     description:
-      "An exploratory data analysis project examining patterns related to AI and employment using a structured public dataset.",
+      "An exploratory data analysis project examining patterns related to AI and employment using a structured synthetic dataset.",
 
     descriptionAr:
-      "مشروع تحليل بيانات استكشافي لدراسة أنماط مرتبطة بالذكاء الاصطناعي وسوق العمل باستخدام مجموعة بيانات منظمة.",
+      "مشروع تحليل بيانات استكشافي لدراسة أنماط مرتبطة بالذكاء الاصطناعي وسوق العمل باستخدام مجموعة بيانات اصطناعية منظمة.",
 
     technologies: [
       "Python",
@@ -449,11 +449,11 @@ export const projects: Project[] = [
 
     filter: "ai-data",
 
-    type: "Coursework Collection",
-    typeAr: "مجموعة تطبيقات أكاديمية",
+    type: "Academic Lab Collection",
+    typeAr: "مجموعة مختبرات أكاديمية",
 
-    role: "Student Developer",
-    roleAr: "مطور طالب",
+    role: "Developer",
+    roleAr: "المطور",
 
     status: "completed",
     priority: "academic",

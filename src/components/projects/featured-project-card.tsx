@@ -10,6 +10,9 @@ import {
 import { FaGithub } from "react-icons/fa6";
 import { useLocale, useTranslations } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
+import { getProjectCaseStudy } from "@/data/project-case-studies";
+
 import type { Project } from "@/types/portfolio";
 
 interface FeaturedProjectCardProps {
@@ -47,6 +50,10 @@ export function FeaturedProjectCard({
   const description = isArabic
     ? project.descriptionAr
     : project.description;
+
+  const hasCaseStudy = Boolean(
+    getProjectCaseStudy(project.slug)
+  );
 
   return (
     <motion.article
@@ -188,6 +195,20 @@ export function FeaturedProjectCard({
           </div>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
+            {hasCaseStudy && (
+              <Link
+                href={`/projects/${project.slug}`}
+                className="focus-ring group inline-flex min-h-11 items-center gap-2 rounded-full border border-primary/30 bg-primary-soft px-5 py-2.5 text-sm font-semibold text-primary transition hover:border-primary/50"
+              >
+                {t("viewCaseStudy")}
+
+                <ArrowUpRight
+                  size={15}
+                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </Link>
+            )}
             {project.github && (
               <a
                 href={project.github}
