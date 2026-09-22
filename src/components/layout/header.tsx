@@ -127,7 +127,7 @@ export function Header() {
   }
 
   return (
-    <header
+    <header data-site-header="true"
       className={
         isScrolled
           ? "fixed inset-x-0 top-0 z-50 border-b border-border bg-background/92 shadow-[0_12px_45px_rgba(0,0,0,0.20)] backdrop-blur-2xl transition-all duration-500"

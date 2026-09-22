@@ -15,6 +15,7 @@ export const education: EducationItem[] = [
     currentYear: "4th Year",
     currentYearAr: "السنة الرابعة",
 
+    startYear: "2022",
     expectedGraduation: "2027",
     gpa: "92/100",
   },

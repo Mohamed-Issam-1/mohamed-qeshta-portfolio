@@ -93,5 +93,22 @@
                          "viewCertificate":  "View certificate",
                          "closeCertificate":  "Close certificate",
                          "certificateLabel":  "Certificate"
-                     }
+                     },
+    "ResumePage":  {
+                       "back":  "Back to portfolio",
+                       "exportPdf":  "Download CV",
+                       "summary":  "Professional Summary",
+                       "skills":  "Technical Skills",
+                       "fullStack":  "Full-Stack",
+                       "aiData":  "AI, Data \u0026 MLOps",
+                       "additional":  "Additional Technologies",
+                       "projects":  "Selected Projects",
+                       "education":  "Education",
+                       "gpa":  "GPA",
+                       "training":  "Current Training",
+                       "certifications":  "Certifications",
+                       "languages":  "Languages",
+                       "expected":  "Expected",
+                       "present":  "Present"
+                   }
 }

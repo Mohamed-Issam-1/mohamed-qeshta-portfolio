@@ -93,5 +93,22 @@
                          "viewCertificate":  "عرض الشهادة",
                          "closeCertificate":  "إغلاق الشهادة",
                          "certificateLabel":  "الشهادة"
-                     }
+                     },
+    "ResumePage":  {
+                       "back":  "العودة إلى البورتفوليو",
+                       "exportPdf":  "تحميل السيرة الذاتية",
+                       "summary":  "الملخص المهني",
+                       "skills":  "المهارات التقنية",
+                       "fullStack":  "Full-Stack",
+                       "aiData":  "الذكاء الاصطناعي والبيانات وMLOps",
+                       "additional":  "تقنيات إضافية",
+                       "projects":  "مشاريع مختارة",
+                       "education":  "التعليم",
+                       "gpa":  "المعدل",
+                       "training":  "التدريبات الحالية",
+                       "certifications":  "الشهادات",
+                       "languages":  "اللغات",
+                       "expected":  "متوقع",
+                       "present":  "الآن"
+                   }
 }

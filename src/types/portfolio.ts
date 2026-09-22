@@ -44,6 +44,7 @@ export interface EducationItem {
   locationAr: string;
   currentYear?: string;
   currentYearAr?: string;
+  startYear?: string;
   expectedGraduation?: string;
   gpa?: string;
 }
