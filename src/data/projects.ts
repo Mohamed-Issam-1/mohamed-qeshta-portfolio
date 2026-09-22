@@ -493,6 +493,47 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "olist-mlops",
+
+    title: "Olist MLOps Pipeline",
+    titleAr: "منظومة Olist MLOps",
+
+    category: "Machine Learning / MLOps",
+    categoryAr: "تعلم الآلة / MLOps",
+
+    filter: "ai-data",
+
+    type: "End-to-End MLOps Project",
+    typeAr: "مشروع MLOps متكامل",
+
+    role: "MLOps / Machine Learning Developer",
+    roleAr: "مطور MLOps وتعلم آلة",
+
+    status: "completed",
+    priority: "strong-supporting",
+
+    description:
+      "An end-to-end MLOps system for predicting late e-commerce deliveries, covering reproducible model development, data and artifact versioning, model registry, production inference APIs, containerized deployment, automated testing, CI/CD, logging, and runtime monitoring.",
+
+    descriptionAr:
+      "نظام MLOps متكامل للتنبؤ بتأخر طلبات التجارة الإلكترونية، يشمل تطوير النموذج بشكل قابل لإعادة الإنتاج، وإدارة إصدارات البيانات والـartifacts، وتسجيل النماذج، وخدمات inference عبر API، والتشغيل بالحاويات، والاختبارات الآلية، وCI/CD، والتسجيل والمراقبة التشغيلية.",
+
+    technologies: [
+      "Python",
+      "scikit-learn",
+      "FastAPI",
+      "MLflow",
+      "DVC",
+      "Docker",
+      "PostgreSQL",
+      "Great Expectations",
+      "GitHub Actions"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/Olist-MLOps"
+  },
+  {
     slug: "intelligent-university-conversational-system",
 
     title: "Intelligent University Conversational System",
