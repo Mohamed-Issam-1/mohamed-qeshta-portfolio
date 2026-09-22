@@ -2,6 +2,14 @@ export type Locale = "en" | "ar";
 
 export type ProjectStatus = "completed" | "in-progress";
 
+export type ProjectFilter =
+  | "web"
+  | "ai-data"
+  | "desktop"
+  | "mobile"
+  | "design"
+  | "planning";
+
 export type ProjectPriority =
   | "featured"
   | "strong-supporting"
@@ -57,6 +65,8 @@ export interface Project {
 
   category: string;
   categoryAr: string;
+
+  filter: ProjectFilter;
 
   type: string;
   typeAr: string;

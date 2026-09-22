@@ -143,10 +143,15 @@ export function Header() {
             setActiveSection("home");
           }}
         >
-          <span>MIQ</span>
+          <span
+            dir="ltr"
+            className="inline-flex items-baseline"
+          >
+            <span>MIQ</span>
 
-          <span className="text-primary transition group-hover:translate-x-0.5">
-            .
+            <span className="text-primary transition group-hover:translate-x-0.5">
+              .
+            </span>
           </span>
         </Link>
 

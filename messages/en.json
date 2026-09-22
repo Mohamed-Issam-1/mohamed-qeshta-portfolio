@@ -110,5 +110,30 @@
                        "languages":  "Languages",
                        "expected":  "Expected",
                        "present":  "Present"
-                   }
+                   },
+    "ProjectsPage":  {
+                         "back":  "Back to selected work",
+                         "eyebrow":  "Project archive",
+                         "title":  "Projects across software, AI, data, design, and product development.",
+                         "description":  "A broader collection of completed and ongoing work, ranging from full-stack systems and desktop applications to AI, data analysis, mobile development, product design, and software engineering planning.",
+                         "totalProjects":  "Projects",
+                         "completedProjects":  "Completed",
+                         "inProgressProjects":  "In development",
+                         "filterTitle":  "Explore by area",
+                         "showing":  "Showing {count} projects",
+                         "completed":  "Completed",
+                         "inProgress":  "In development",
+                         "github":  "GitHub",
+                         "openProject":  "Open project",
+                         "liveDemo":  "Live demo",
+                         "filters":  {
+                                         "all":  "All",
+                                         "web":  "Web",
+                                         "ai-data":  "AI \u0026 Data",
+                                         "desktop":  "Desktop \u0026 Games",
+                                         "mobile":  "Mobile",
+                                         "design":  "UI/UX",
+                                         "planning":  "Planning"
+                                     }
+                     }
 }

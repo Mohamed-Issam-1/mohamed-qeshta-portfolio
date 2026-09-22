@@ -2,39 +2,40 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
-    slug: "bookspace-library-management-system",
+    slug: "language-center-management-system",
 
-    title: "BookSpace — Library Management System",
-    titleAr: "BookSpace — نظام إدارة مكتبة",
+    title: "Language Center Management System",
+    titleAr: "نظام إدارة مركز اللغات",
 
-    category: "Desktop Application",
-    categoryAr: "تطبيق سطح مكتب",
+    category: "Full-Stack Web Application",
+    categoryAr: "تطبيق ويب Full-Stack",
 
-    type: "Academic Individual Project",
-    typeAr: "مشروع أكاديمي فردي",
+    filter: "web",
 
-    role: "Developer",
-    roleAr: "المطور",
+    type: "Team Project",
+    typeAr: "مشروع جماعي",
 
-    status: "completed",
-    priority: "featured",
+    role: "Team Leader / Full-Stack Developer",
+    roleAr: "قائد الفريق / مطور Full-Stack",
+
+    status: "in-progress",
+    priority: "strong-supporting",
 
     description:
-      "A JavaFX desktop application for managing library operations with database integration, structured workflows, and a modernized user interface.",
+      "A full-stack language center management platform covering authentication, account security, administrative workflows, multi-tenancy, reporting, and frontend-backend integration.",
 
     descriptionAr:
-      "تطبيق سطح مكتب مبني باستخدام JavaFX لإدارة عمليات المكتبة، مع ربط قاعدة بيانات، وتنظيم سير العمل، وواجهة مستخدم حديثة.",
+      "منصة Full-Stack لإدارة مركز لغات تشمل المصادقة وأمان الحسابات وسير العمل الإداري وتعدد المستأجرين والتقارير والتكامل بين الواجهة والخادم.",
 
     technologies: [
-      "Java",
-      "JavaFX",
-      "MariaDB",
-      "MySQL",
-      "JDBC"
-    ],
-
-    github:
-      "https://github.com/Mohamed-Issam-1/bookspace-library-management-system"
+      "Laravel",
+      "PHP",
+      "React",
+      "Inertia.js",
+      "TypeScript",
+      "Filament",
+      "MySQL"
+    ]
   },
 
   {
@@ -45,6 +46,8 @@ export const projects: Project[] = [
 
     category: "AI / NLP",
     categoryAr: "الذكاء الاصطناعي / معالجة اللغة",
+
+    filter: "ai-data",
 
     type: "Academic Project — Refactored for Portfolio",
     typeAr: "مشروع أكاديمي — أعيد تنظيمه للبورتفوليو",
@@ -76,6 +79,44 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "bookspace-library-management-system",
+
+    title: "BookSpace — Library Management System",
+    titleAr: "BookSpace — نظام إدارة مكتبة",
+
+    category: "Desktop Application",
+    categoryAr: "تطبيق سطح مكتب",
+
+    filter: "desktop",
+
+    type: "Academic Individual Project",
+    typeAr: "مشروع أكاديمي فردي",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "featured",
+
+    description:
+      "A JavaFX desktop application for managing library operations with database integration, structured workflows, and a modernized user interface.",
+
+    descriptionAr:
+      "تطبيق سطح مكتب مبني باستخدام JavaFX لإدارة عمليات المكتبة، مع ربط قاعدة بيانات، وتنظيم سير العمل، وواجهة مستخدم حديثة.",
+
+    technologies: [
+      "Java",
+      "JavaFX",
+      "MariaDB",
+      "MySQL",
+      "JDBC"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/bookspace-library-management-system"
+  },
+
+  {
     slug: "almosafer",
 
     title: "ALMosafer — AI-Powered Travel Mobile App",
@@ -83,6 +124,8 @@ export const projects: Project[] = [
 
     category: "UI/UX Design",
     categoryAr: "تصميم UI/UX",
+
+    filter: "design",
 
     type: "Academic Individual Project",
     typeAr: "مشروع أكاديمي فردي",
@@ -109,9 +152,377 @@ export const projects: Project[] = [
 
     externalUrl:
       "https://www.figma.com/design/8a8nXYFBKrd3kjiypZt5f7/AlMosafer-Project?node-id=0-1&t=MHiUIwumdWst5OxP-1"
+  },
+
+  {
+    slug: "oracle-apex-contact-management-system",
+
+    title: "Oracle APEX Contact Management System",
+    titleAr: "نظام إدارة جهات الاتصال باستخدام Oracle APEX",
+
+    category: "Database Application",
+    categoryAr: "تطبيق قواعد بيانات",
+
+    filter: "web",
+
+    type: "Academic Project",
+    typeAr: "مشروع أكاديمي",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "strong-supporting",
+
+    description:
+      "A contact management system built with Oracle APEX and Oracle Database, featuring interactive reports, server-side validation, authentication, and role-based access control.",
+
+    descriptionAr:
+      "نظام لإدارة جهات الاتصال باستخدام Oracle APEX وOracle Database، ويشمل تقارير تفاعلية والتحقق من البيانات على الخادم والمصادقة والتحكم بالصلاحيات حسب الأدوار.",
+
+    technologies: [
+      "Oracle APEX",
+      "Oracle Database",
+      "PL/SQL",
+      "SQL"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/oracle-apex-contact-management-system"
+  },
+
+  {
+    slug: "simo-and-the-lost-crystal",
+
+    title: "Simo and the Lost Crystal",
+    titleAr: "Simo and the Lost Crystal",
+
+    category: "Game Development",
+    categoryAr: "تطوير الألعاب",
+
+    filter: "desktop",
+
+    type: "Independent Project",
+    typeAr: "مشروع مستقل",
+
+    role: "Game Developer",
+    roleAr: "مطور ألعاب",
+
+    status: "in-progress",
+    priority: "strong-supporting",
+
+    description:
+      "A 2D side-scrolling platformer developed in Unity, combining custom pixel-art direction, character animation, gameplay systems, menus, cutscenes, and level design.",
+
+    descriptionAr:
+      "لعبة منصات ثنائية الأبعاد يتم تطويرها باستخدام Unity، تجمع بين أسلوب Pixel Art مخصص وتحريك الشخصية وأنظمة اللعب والقوائم والمشاهد القصصية وتصميم المراحل.",
+
+    technologies: [
+      "Unity",
+      "C#",
+      "2D",
+      "Pixel Art",
+      "Game Design"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/Simo-and-the-Lost-Crystal"
+  },
+
+  {
+    slug: "youtube-search-app",
+
+    title: "YouTube Search App",
+    titleAr: "تطبيق البحث في YouTube",
+
+    category: "Android Application",
+    categoryAr: "تطبيق أندرويد",
+
+    filter: "mobile",
+
+    type: "Academic Project",
+    typeAr: "مشروع أكاديمي",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "An Android application for searching and browsing YouTube content through an external API, built as a practical mobile development project.",
+
+    descriptionAr:
+      "تطبيق أندرويد للبحث وتصفح محتوى YouTube من خلال API خارجي، تم تطويره كمشروع عملي في برمجة تطبيقات الهاتف.",
+
+    technologies: [
+      "Java",
+      "Android",
+      "REST API",
+      "JSON"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/YouTubeSearchApp"
+  },
+
+  {
+    slug: "twitter-emotion-classification",
+
+    title: "Twitter Emotion Classification",
+    titleAr: "تصنيف المشاعر في تغريدات Twitter",
+
+    category: "Machine Learning / NLP",
+    categoryAr: "تعلم الآلة / معالجة اللغة",
+
+    filter: "ai-data",
+
+    type: "Academic Machine Learning Project",
+    typeAr: "مشروع أكاديمي في تعلم الآلة",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "A machine learning project focused on classifying emotions in text using preprocessing, feature engineering, model training, and evaluation workflows.",
+
+    descriptionAr:
+      "مشروع تعلم آلة يركز على تصنيف المشاعر في النصوص من خلال معالجة البيانات وهندسة الخصائص وتدريب النماذج وتقييمها.",
+
+    technologies: [
+      "Python",
+      "NLP",
+      "scikit-learn",
+      "pandas",
+      "Machine Learning"
+    ]
+  },
+
+  {
+    slug: "bank-marketing-classification",
+
+    title: "Bank Marketing Classification",
+    titleAr: "تصنيف بيانات التسويق البنكي",
+
+    category: "Machine Learning",
+    categoryAr: "تعلم الآلة",
+
+    filter: "ai-data",
+
+    type: "Academic Machine Learning Project",
+    typeAr: "مشروع أكاديمي في تعلم الآلة",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "A supervised machine learning classification project exploring preprocessing, model comparison, evaluation, and interpretation on bank marketing data.",
+
+    descriptionAr:
+      "مشروع تصنيف باستخدام تعلم الآلة يستكشف تجهيز البيانات ومقارنة النماذج وتقييمها وتحليل النتائج على بيانات التسويق البنكي.",
+
+    technologies: [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "Classification",
+      "Machine Learning"
+    ]
+  },
+
+  {
+    slug: "football-match-data-pipeline",
+
+    title: "Football Match Data Pipeline",
+    titleAr: "خط معالجة بيانات مباريات كرة القدم",
+
+    category: "Data Engineering",
+    categoryAr: "هندسة البيانات",
+
+    filter: "ai-data",
+
+    type: "Data Project",
+    typeAr: "مشروع بيانات",
+
+    role: "Developer",
+    roleAr: "المطور",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "A data collection and processing project focused on extracting football match information and transforming it into structured datasets for analysis.",
+
+    descriptionAr:
+      "مشروع لجمع ومعالجة بيانات مباريات كرة القدم وتحويلها إلى بيانات منظمة قابلة للتحليل.",
+
+    technologies: [
+      "Python",
+      "Web Scraping",
+      "pandas",
+      "Data Processing"
+    ]
+  },
+
+  {
+    slug: "ai-job-market-impact-analysis",
+
+    title: "AI Job Market Impact Analysis",
+    titleAr: "تحليل تأثير الذكاء الاصطناعي على سوق العمل",
+
+    category: "Data Analysis",
+    categoryAr: "تحليل البيانات",
+
+    filter: "ai-data",
+
+    type: "Data Analysis Project",
+    typeAr: "مشروع تحليل بيانات",
+
+    role: "Data Analyst",
+    roleAr: "محلل بيانات",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "An exploratory data analysis project examining patterns related to AI and employment using a structured public dataset.",
+
+    descriptionAr:
+      "مشروع تحليل بيانات استكشافي لدراسة أنماط مرتبطة بالذكاء الاصطناعي وسوق العمل باستخدام مجموعة بيانات منظمة.",
+
+    technologies: [
+      "Python",
+      "pandas",
+      "Data Analysis",
+      "Visualization"
+    ]
+  },
+
+  {
+    slug: "backloggd-games-data-analysis",
+
+    title: "Backloggd Games Data Analysis",
+    titleAr: "تحليل بيانات ألعاب Backloggd",
+
+    category: "Data Analysis",
+    categoryAr: "تحليل البيانات",
+
+    filter: "ai-data",
+
+    type: "Data Project",
+    typeAr: "مشروع بيانات",
+
+    role: "Data Analyst",
+    roleAr: "محلل بيانات",
+
+    status: "completed",
+    priority: "supporting",
+
+    description:
+      "A data analysis project exploring video-game information collected from Backloggd and preparing it for structured analysis and visualization.",
+
+    descriptionAr:
+      "مشروع لتحليل بيانات ألعاب الفيديو المجمعة من Backloggd وتجهيزها للتحليل المنظم والتصورات البيانية.",
+
+    technologies: [
+      "Python",
+      "pandas",
+      "Data Analysis",
+      "Web Data"
+    ]
+  },
+
+  {
+    slug: "machine-learning-course-labs",
+
+    title: "Machine Learning Course Labs",
+    titleAr: "مختبرات مقرر تعلم الآلة",
+
+    category: "Machine Learning",
+    categoryAr: "تعلم الآلة",
+
+    filter: "ai-data",
+
+    type: "Coursework Collection",
+    typeAr: "مجموعة تطبيقات أكاديمية",
+
+    role: "Student Developer",
+    roleAr: "مطور طالب",
+
+    status: "completed",
+    priority: "academic",
+
+    description:
+      "A collection of practical machine learning exercises documenting experimentation with preprocessing, algorithms, training, and evaluation.",
+
+    descriptionAr:
+      "مجموعة من التطبيقات العملية في تعلم الآلة توثق التجارب المتعلقة بتجهيز البيانات والخوارزميات والتدريب والتقييم.",
+
+    technologies: [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "Machine Learning"
+    ]
+  },
+
+  {
+    slug: "intelligent-university-conversational-system",
+
+    title: "Intelligent University Conversational System",
+    titleAr: "نظام محادثة جامعي ذكي",
+
+    category: "Software Engineering Planning",
+    categoryAr: "تخطيط هندسة البرمجيات",
+
+    filter: "planning",
+
+    type: "Software Engineering Planning Project",
+    typeAr: "مشروع تخطيط هندسة برمجيات",
+
+    role: "Project Planner",
+    roleAr: "مخطط المشروع",
+
+    status: "completed",
+    priority: "academic",
+
+    description:
+      "A software engineering planning project documenting requirements, diagrams, project scheduling, and system planning for an intelligent university conversational system.",
+
+    descriptionAr:
+      "مشروع تخطيط في هندسة البرمجيات يوثق المتطلبات والمخططات والجدولة وخطة نظام محادثة جامعي ذكي.",
+
+    technologies: [
+      "Software Engineering",
+      "Requirements",
+      "EDraw",
+      "Microsoft Project"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/intelligent-university-conversational-system"
   }
 ];
 
 export const featuredProjects = projects.filter(
   (project) => project.priority === "featured"
 );
+
+export const projectFilters = [
+  "all",
+  "web",
+  "ai-data",
+  "desktop",
+  "mobile",
+  "design",
+  "planning"
+] as const;
+
+export type ProjectFilterValue =
+  (typeof projectFilters)[number];
