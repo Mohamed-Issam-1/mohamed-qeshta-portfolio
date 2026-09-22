@@ -154,6 +154,7 @@ export function ProjectCard({
 
         {(hasCaseStudy ||
           project.github ||
+          project.githubShowcase ||
           project.externalUrl ||
           project.liveDemo) && (
           <div className="mt-auto flex flex-wrap gap-3 pt-8">
@@ -171,9 +172,9 @@ export function ProjectCard({
                 />
               </Link>
             )}
-            {project.github && (
+            {(project.github || project.githubShowcase) && (
               <a
-                href={project.github}
+                href={project.github ?? project.githubShowcase}
                 target="_blank"
                 rel="noreferrer"
                 className="focus-ring group/link inline-flex min-h-10 items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-xs font-semibold text-foreground transition hover:border-border-strong hover:bg-primary-soft"
@@ -183,7 +184,7 @@ export function ProjectCard({
                   aria-hidden="true"
                 />
 
-                {t("github")}
+                {project.githubShowcase ? t("githubShowcase") : t("github")}
 
                 <ArrowUpRight
                   size={13}

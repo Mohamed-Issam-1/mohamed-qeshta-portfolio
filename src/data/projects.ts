@@ -35,7 +35,10 @@ export const projects: Project[] = [
       "TypeScript",
       "Filament",
       "MySQL"
-    ]
+    ],
+
+    githubShowcase:
+      "https://github.com/Mohamed-Issam-1/language-center-management-system-showcase"
   },
 
   {
@@ -225,8 +228,6 @@ export const projects: Project[] = [
       "Game Design"
     ],
 
-    github:
-      "https://github.com/Mohamed-Issam-1/Simo-and-the-Lost-Crystal"
   },
 
   {
@@ -298,7 +299,10 @@ export const projects: Project[] = [
       "scikit-learn",
       "pandas",
       "Machine Learning"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/twitter-emotion-classification"
   },
 
   {
@@ -333,7 +337,10 @@ export const projects: Project[] = [
       "scikit-learn",
       "Classification",
       "Machine Learning"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/bank-marketing-classification"
   },
 
   {
@@ -367,7 +374,10 @@ export const projects: Project[] = [
       "Web Scraping",
       "pandas",
       "Data Processing"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/football-match-data-pipeline"
   },
 
   {
@@ -401,7 +411,10 @@ export const projects: Project[] = [
       "pandas",
       "Data Analysis",
       "Visualization"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/ai-job-market-impact-analysis"
   },
 
   {
@@ -435,7 +448,10 @@ export const projects: Project[] = [
       "pandas",
       "Data Analysis",
       "Web Data"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/backloggd-games-data-analysis"
   },
 
   {
@@ -469,7 +485,10 @@ export const projects: Project[] = [
       "pandas",
       "scikit-learn",
       "Machine Learning"
-    ]
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/machine-learning-course-labs"
   },
 
   {

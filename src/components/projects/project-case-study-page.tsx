@@ -139,9 +139,9 @@ export function ProjectCaseStudyPage({
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                {project.github && (
+                {(project.github || project.githubShowcase) && (
                   <a
-                    href={project.github}
+                    href={project.github ?? project.githubShowcase}
                     target="_blank"
                     rel="noreferrer"
                     className="focus-ring group inline-flex min-h-11 items-center gap-2 rounded-full border border-border bg-surface px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-border-strong hover:bg-primary-soft"
@@ -151,7 +151,7 @@ export function ProjectCaseStudyPage({
                       aria-hidden="true"
                     />
 
-                    {t("github")}
+                    {project.githubShowcase ? t("githubShowcase") : t("github")}
 
                     <ArrowUpRight
                       size={14}

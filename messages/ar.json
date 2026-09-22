@@ -35,6 +35,7 @@
                          "title":  "مشاريع بعمق أكبر.",
                          "description":  "مجموعة مختارة من المشاريع التي تعكس أسلوبي في تطوير البرمجيات، ودمج الذكاء الاصطناعي، وتصميم الواجهات، وبناء تجارب رقمية متكاملة.",
                          "github":  "عرض المصدر",
+                         "githubShowcase":  "GitHub Showcase",
                          "openProject":  "فتح المشروع",
                          "viewAll":  "استعرض جميع المشاريع",
                          "viewCaseStudy":  "دراسة المشروع"
@@ -125,6 +126,7 @@
                          "completed":  "مكتمل",
                          "inProgress":  "قيد التطوير",
                          "github":  "GitHub",
+                         "githubShowcase":  "GitHub Showcase",
                          "openProject":  "فتح المشروع",
                          "liveDemo":  "عرض مباشر",
                          "filters":  {
@@ -154,6 +156,7 @@
                              "outcome":  "النتيجة",
                              "techStack":  "التقنيات المستخدمة",
                              "github":  "GitHub",
+                         "githubShowcase":  "GitHub Showcase",
                              "openProject":  "فتح المشروع"
                          }
 }

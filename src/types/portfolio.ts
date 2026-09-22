@@ -83,6 +83,7 @@ export interface Project {
   technologies: string[];
 
   github?: string;
+  githubShowcase?: string;
   liveDemo?: string;
   caseStudy?: string;
   externalUrl?: string;

@@ -35,6 +35,7 @@
                          "title":  "Projects with depth.",
                          "description":  "A selection of projects that reflect how I approach software development, AI integration, interface design, and complete product experiences.",
                          "github":  "View source",
+                         "githubShowcase":  "GitHub Showcase",
                          "openProject":  "Open project",
                          "viewAll":  "Explore all projects",
                          "viewCaseStudy":  "View case study"
@@ -125,6 +126,7 @@
                          "completed":  "Completed",
                          "inProgress":  "In development",
                          "github":  "GitHub",
+                         "githubShowcase":  "GitHub Showcase",
                          "openProject":  "Open project",
                          "liveDemo":  "Live demo",
                          "filters":  {
@@ -154,6 +156,7 @@
                              "outcome":  "Outcome",
                              "techStack":  "Tech stack",
                              "github":  "GitHub",
+                         "githubShowcase":  "GitHub Showcase",
                              "openProject":  "Open project"
                          }
 }
