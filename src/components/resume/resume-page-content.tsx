@@ -89,7 +89,9 @@ export function ResumePageContent() {
 
                 <div className="resume-contact grid gap-2 text-sm text-muted md:text-end">
                   <a
-                    href={`mailto:${resumeData.personalInfo.email}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(resumeData.personalInfo.email)}`}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-2 hover:text-primary"
                   >
                     <Mail size={14} aria-hidden="true" />

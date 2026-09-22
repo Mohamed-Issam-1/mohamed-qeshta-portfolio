@@ -122,8 +122,8 @@ export const projects: Project[] = [
   {
     slug: "almosafer",
 
-    title: "ALMosafer — AI-Powered Travel Mobile App",
-    titleAr: "ALMosafer — تطبيق سفر مدعوم بالذكاء الاصطناعي",
+    title: "ALMosafer — AI Travel App UI/UX Case Study",
+    titleAr: "ALMosafer — دراسة UI/UX لتطبيق سفر بالذكاء الاصطناعي",
 
     category: "UI/UX Design",
     categoryAr: "تصميم UI/UX",
@@ -513,7 +513,7 @@ export const projects: Project[] = [
     priority: "strong-supporting",
 
     description:
-      "An end-to-end MLOps system for predicting late e-commerce deliveries, covering reproducible model development, data and artifact versioning, model registry, production inference APIs, containerized deployment, automated testing, CI/CD, logging, and runtime monitoring.",
+      "An end-to-end MLOps system for predicting late e-commerce deliveries, covering reproducible model development, data and artifact versioning, model registry, inference APIs, containerized deployment, automated testing, CI/CD, logging, and runtime monitoring.",
 
     descriptionAr:
       "نظام MLOps متكامل للتنبؤ بتأخر طلبات التجارة الإلكترونية، يشمل تطوير النموذج بشكل قابل لإعادة الإنتاج، وإدارة إصدارات البيانات والـartifacts، وتسجيل النماذج، وخدمات inference عبر API، والتشغيل بالحاويات، والاختبارات الآلية، وCI/CD، والتسجيل والمراقبة التشغيلية.",

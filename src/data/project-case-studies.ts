@@ -411,7 +411,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
       "Exploratory analysis and preprocessing fitting are restricted to training data to reduce leakage risk.",
       "The selected Logistic Regression model and fitted preprocessing artifacts are reused during inference without retraining or refitting.",
       "DVC versions large datasets and generated artifacts while MLflow manages model metadata and the registered production-style model.",
-      "Great Expectations validates incoming data before inference.",
+      "Great Expectations supports data-quality validation within the machine learning workflow.",
       "FastAPI exposes health, model information, prediction, batch prediction, and monitoring endpoints.",
       "Docker Compose coordinates DVC restore, PostgreSQL, MLflow, model bootstrap, and the inference API.",
       "GitHub Actions runs code-quality checks, artifact restoration, model bootstrap, automated tests, and Docker build steps."
@@ -423,7 +423,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
       "حصر التحليل الاستكشافي وملاءمة المعالجة المسبقة على بيانات التدريب لتقليل مخاطر تسرب البيانات.",
       "إعادة استخدام نموذج Logistic Regression المختار وملفات المعالجة المسبقة الملائمة أثناء inference دون إعادة التدريب أو الـfitting.",
       "استخدام DVC لإدارة إصدارات البيانات والـartifacts وMLflow لإدارة معلومات النموذج والنموذج المسجل.",
-      "استخدام Great Expectations للتحقق من البيانات قبل تنفيذ inference.",
+      "استخدام Great Expectations لدعم التحقق من جودة البيانات ضمن سير عمل تعلم الآلة.",
       "توفير نقاط نهاية عبر FastAPI لفحص الصحة ومعلومات النموذج والتنبؤ الفردي والجماعي والمراقبة.",
       "استخدام Docker Compose لتنسيق استعادة ملفات DVC وPostgreSQL وMLflow وتهيئة النموذج وخدمة API.",
       "استخدام GitHub Actions لتشغيل فحوصات جودة الكود واستعادة الـartifacts وتهيئة النموذج والاختبارات وبناء Docker."

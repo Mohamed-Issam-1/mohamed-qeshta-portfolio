@@ -183,6 +183,7 @@
     "eyebrow": "Contact",
     "title": "Let's build something meaningful.",
     "description": "Have a project, opportunity, or collaboration in mind? You can reach me directly by email or connect with me through LinkedIn and GitHub.",
+    "emailLabel": "Email",
     "linkedinValue": "Connect on LinkedIn",
     "githubValue": "Explore my GitHub"
   },

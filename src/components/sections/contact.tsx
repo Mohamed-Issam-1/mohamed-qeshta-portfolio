@@ -16,7 +16,7 @@ export function Contact() {
 
   const links = [
     {
-      label: "Email",
+      label: t("emailLabel"),
       value: personalInfo.email,
       href: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalInfo.email)}`,
       icon: Mail,
@@ -147,7 +147,7 @@ export function Contact() {
                         </p>
 
                         <p
-                          dir={item.label === "Email" ? "ltr" : undefined}
+                          dir={item.value === personalInfo.email ? "ltr" : undefined}
                           className="mt-1 truncate text-sm font-semibold text-foreground sm:text-base"
                         >
                           {item.value}
