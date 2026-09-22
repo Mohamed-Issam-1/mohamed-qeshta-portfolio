@@ -39,6 +39,20 @@ export function Header() {
   const t = useTranslations("Navigation");
 
   useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  useEffect(() => {
     function updateNavigationState() {
       setIsScrolled(window.scrollY > 24);
 
@@ -198,6 +212,7 @@ export function Header() {
               : t("openMenu")
           }
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? (
             <X size={19} />
@@ -217,7 +232,10 @@ export function Header() {
       />
 
       {menuOpen && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
+        <div
+          id="mobile-navigation"
+          className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden"
+        >
           <div className="site-container flex flex-col py-4">
             <nav className="flex flex-col gap-1">
               {navigation.map((item) => {

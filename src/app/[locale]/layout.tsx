@@ -62,6 +62,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={direction}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} antialiased`}
     >
