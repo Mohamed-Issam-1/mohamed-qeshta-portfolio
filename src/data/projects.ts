@@ -227,7 +227,8 @@ export const projects: Project[] = [
       "Pixel Art",
       "Game Design"
     ],
-
+    githubShowcase:
+      "https://github.com/Mohamed-Issam-1/simo-and-the-lost-crystal-showcase"
   },
 
   {
@@ -241,8 +242,8 @@ export const projects: Project[] = [
 
     filter: "mobile",
 
-    type: "Academic Database Project",
-    typeAr: "مشروع أكاديمي في قواعد البيانات",
+    type: "Academic Mobile Project",
+    typeAr: "مشروع أكاديمي في تطوير تطبيقات الهاتف",
 
     role: "Developer",
     roleAr: "المطور",
