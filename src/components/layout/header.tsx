@@ -16,6 +16,7 @@ const navigation = [
   { key: "work", href: "/#work" },
   { key: "about", href: "/#about" },
   { key: "skills", href: "/#skills" },
+  { key: "services", href: "/#services" },
   { key: "learning", href: "/#learning" },
   { key: "resume", href: "/resume" },
   { key: "contact", href: "/#contact" },
@@ -26,6 +27,7 @@ const sectionIds = [
   "work",
   "about",
   "skills",
+  "services",
   "learning",
   "contact",
 ] as const;

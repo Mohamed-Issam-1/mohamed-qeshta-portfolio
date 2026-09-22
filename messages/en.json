@@ -3,6 +3,7 @@
                        "work":  "Work",
                        "about":  "About",
                        "skills":  "Skills",
+                       "services":  "Services",
                        "learning":  "Learning",
                        "resume":  "Resume",
                        "contact":  "Contact",
@@ -160,6 +161,24 @@
                              "openProject":  "Open project"
                          }
 ,
+  "Services": {
+    "eyebrow": "Services",
+    "title": "What I can help you build.",
+    "description": "Focused development services for turning ideas and designs into reliable, responsive, and maintainable web products.",
+    "cta": "Discuss your project",
+    "fullStack": {
+      "title": "Full-Stack Web Development",
+      "description": "Complete web applications from interface to backend, including authentication, databases, APIs, dashboards, and end-to-end integration."
+    },
+    "frontend": {
+      "title": "Frontend & UI Implementation",
+      "description": "Responsive and polished interfaces built from designs or product ideas, with attention to usability, performance, accessibility, and maintainable components."
+    },
+    "backend": {
+      "title": "Backend & API Integration",
+      "description": "Backend features, REST APIs, authentication and authorization, database workflows, and reliable integration between frontend and external services."
+    }
+  },
   "Contact": {
     "eyebrow": "Contact",
     "title": "Let's build something meaningful.",

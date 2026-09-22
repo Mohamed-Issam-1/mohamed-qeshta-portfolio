@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/hero";
 import { SelectedWork } from "@/components/sections/selected-work";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
+import { Services } from "@/components/sections/services";
 import { Learning } from "@/components/sections/learning";
 import { Contact } from "@/components/sections/contact";
 import { getPageMetadata } from "@/lib/seo";
@@ -41,6 +42,7 @@ export default async function HomePage({
       <SelectedWork />
       <About />
       <Skills />
+      <Services />
       <Learning />
       <Contact />
     </main>
