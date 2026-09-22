@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -204,6 +206,11 @@ export function ProjectCaseStudyPage({
         </div>
       </section>
 
+      <ProjectVisuals
+        project={project}
+        title={title}
+      />
+
       <section className="border-b border-border">
         <div className="site-container section-spacing">
           <div className="grid gap-5 lg:grid-cols-2">
@@ -323,6 +330,110 @@ export function ProjectCaseStudyPage({
   );
 }
 
+function ProjectVisuals({
+  project,
+  title,
+}: {
+  project: Project;
+  title: string;
+}) {
+  const images = [
+    ...(project.image ? [project.image] : []),
+    ...(project.galleryImages ?? []),
+  ];
+
+  if (images.length === 0) {
+    return null;
+  }
+
+  const isMobileGallery =
+    project.slug === "almosafer";
+
+  if (isMobileGallery) {
+    return (
+      <section className="border-b border-border">
+        <div className="site-container py-10 sm:py-14">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {images.map((image, index) => (
+              <div
+                key={image}
+                className="relative aspect-[402/874] overflow-hidden rounded-[1.4rem] border border-border bg-surface shadow-[var(--shadow-soft)]"
+              >
+                <Image
+                  src={image}
+                  alt={`${title} screen ${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  className="object-contain"
+                />
+
+                <div
+                  className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.04]"
+                  aria-hidden="true"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="border-b border-border">
+      <div className="site-container py-10 sm:py-14">
+        <div
+          className={
+            images.length > 1
+              ? "grid gap-5 lg:grid-cols-2"
+              : "grid gap-5"
+          }
+        >
+          {images.map((image, index) => (
+            <div
+              key={image}
+              className={
+                images.length > 1
+                  ? "relative aspect-[16/10] overflow-hidden rounded-[1.6rem] border border-border bg-surface shadow-[var(--shadow-soft)]"
+                  : "relative aspect-[16/9] overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-[var(--shadow-soft)]"
+              }
+            >
+              <Image
+                src={image}
+                alt=""
+                fill
+                sizes={
+                  images.length > 1
+                    ? "(max-width: 1024px) 100vw, 50vw"
+                    : "(max-width: 1280px) 100vw, 1200px"
+                }
+                className="scale-110 object-cover opacity-15 blur-2xl"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={image}
+                alt={`${title} preview ${index + 1}`}
+                fill
+                sizes={
+                  images.length > 1
+                    ? "(max-width: 1024px) 100vw, 50vw"
+                    : "(max-width: 1280px) 100vw, 1200px"
+                }
+                className="object-contain p-2 sm:p-4"
+              />
+
+              <div
+                className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.04]"
+                aria-hidden="true"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 function MetaCard({
   label,
   value,

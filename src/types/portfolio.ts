@@ -89,6 +89,7 @@ export interface Project {
   externalUrl?: string;
 
   image?: string;
+  galleryImages?: string[];
 }
 
 export interface SkillGroup {

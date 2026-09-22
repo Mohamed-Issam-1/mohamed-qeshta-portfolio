@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
@@ -72,6 +74,31 @@ export function ProjectCard({
       }}
       className="group flex min-h-[24rem] flex-col overflow-hidden rounded-[1.6rem] border border-border bg-background-elevated/45 transition duration-300 hover:-translate-y-1 hover:border-border-strong"
     >
+      {project.image && (
+        <div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-surface">
+          <Image
+            src={project.image}
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="scale-110 object-cover opacity-15 blur-2xl"
+            aria-hidden="true"
+          />
+
+          <Image
+            src={project.image}
+            alt={`${title} project preview`}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain p-2 transition duration-500 group-hover:scale-[1.015] sm:p-3"
+          />
+
+          <div
+            className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.035]"
+            aria-hidden="true"
+          />
+        </div>
+      )}
       <div className="relative border-b border-border bg-surface/65 p-6">
         <div
           className="project-visual-grid pointer-events-none absolute inset-0 opacity-45"

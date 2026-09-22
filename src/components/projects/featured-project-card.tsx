@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -88,6 +90,38 @@ export function FeaturedProjectCard({
         }
       >
         <div className="relative flex min-h-[22rem] h-full overflow-hidden rounded-[1.75rem] border border-border bg-surface">
+          {project.image && (
+            <div className="absolute inset-0 z-20 overflow-hidden bg-surface">
+              <Image
+                src={project.image}
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="scale-110 object-cover opacity-15 blur-2xl"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={project.image}
+                alt={`${title} project preview`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain p-3 transition duration-700 group-hover:scale-[1.015] sm:p-5"
+              />
+
+              <div
+                className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.04]"
+                aria-hidden="true"
+              />
+
+              <span
+                dir="ltr"
+                className="absolute right-4 top-4 rounded-full border border-white/10 bg-black/45 px-3 py-1.5 font-mono text-[10px] tracking-[0.16em] text-white/80 backdrop-blur-md"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
+          )}
           <div
             className="project-visual-grid pointer-events-none absolute inset-0"
             aria-hidden="true"

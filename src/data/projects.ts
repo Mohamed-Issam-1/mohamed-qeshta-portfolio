@@ -19,7 +19,7 @@ export const projects: Project[] = [
     roleAr: "قائد الفريق / مطور Full-Stack",
 
     status: "in-progress",
-    priority: "strong-supporting",
+    priority: "featured",
 
     description:
       "A full-stack language center management platform covering authentication, account security, administrative workflows, multi-tenancy, reporting, and frontend-backend integration.",
@@ -38,7 +38,56 @@ export const projects: Project[] = [
     ],
 
     githubShowcase:
-      "https://github.com/Mohamed-Issam-1/language-center-management-system-showcase"
+      "https://github.com/Mohamed-Issam-1/language-center-management-system-showcase",
+
+    image: "/images/projects/lcms-landing.webp",
+
+    galleryImages: [
+      "/images/projects/lcms-teacher-dashboard.webp"
+    ]
+  },
+  {
+    slug: "olist-mlops",
+
+    title: "Olist MLOps Pipeline",
+    titleAr: "منظومة Olist MLOps",
+
+    category: "Machine Learning / MLOps",
+    categoryAr: "تعلم الآلة / MLOps",
+
+    filter: "ai-data",
+
+    type: "End-to-End MLOps Project",
+    typeAr: "مشروع MLOps متكامل",
+
+    role: "MLOps / Machine Learning Developer",
+    roleAr: "مطور MLOps وتعلم آلة",
+
+    status: "completed",
+    priority: "featured",
+
+    description:
+      "An end-to-end MLOps system for predicting late e-commerce deliveries, covering reproducible model development, data and artifact versioning, model registry, inference APIs, containerized deployment, automated testing, CI/CD, logging, and runtime monitoring.",
+
+    descriptionAr:
+      "نظام MLOps متكامل للتنبؤ بتأخر طلبات التجارة الإلكترونية، يشمل تطوير النموذج بشكل قابل لإعادة الإنتاج، وإدارة إصدارات البيانات والـartifacts، وتسجيل النماذج، وخدمات inference عبر API، والتشغيل بالحاويات، والاختبارات الآلية، وCI/CD، والتسجيل والمراقبة التشغيلية.",
+
+    technologies: [
+      "Python",
+      "scikit-learn",
+      "FastAPI",
+      "MLflow",
+      "DVC",
+      "Docker",
+      "PostgreSQL",
+      "Great Expectations",
+      "GitHub Actions"
+    ],
+
+    github:
+      "https://github.com/Mohamed-Issam-1/Olist-MLOps",
+
+    image: "/images/projects/olist-mlops-workflow.webp",
   },
 
   {
@@ -78,7 +127,9 @@ export const projects: Project[] = [
     ],
 
     github:
-      "https://github.com/Mohamed-Issam-1/ai-travel-assistant"
+      "https://github.com/Mohamed-Issam-1/ai-travel-assistant",
+
+    image: "/images/projects/arabic-ai-travel-assistant.webp"
   },
 
   {
@@ -99,7 +150,7 @@ export const projects: Project[] = [
     roleAr: "المطور",
 
     status: "completed",
-    priority: "featured",
+    priority: "strong-supporting",
 
     description:
       "A JavaFX desktop application for managing library operations with database integration, structured workflows, and a modernized user interface.",
@@ -116,7 +167,13 @@ export const projects: Project[] = [
     ],
 
     github:
-      "https://github.com/Mohamed-Issam-1/bookspace-library-management-system"
+      "https://github.com/Mohamed-Issam-1/bookspace-library-management-system",
+
+    image: "/images/projects/bookspace-dashboard.webp",
+
+    galleryImages: [
+      "/images/projects/bookspace-requests.webp"
+    ],
   },
 
   {
@@ -137,7 +194,7 @@ export const projects: Project[] = [
     roleAr: "مصمم UI/UX",
 
     status: "completed",
-    priority: "featured",
+    priority: "strong-supporting",
 
     description:
       "A mobile UI/UX case study exploring AI-assisted travel planning, destination discovery, saved destinations, bookings, and account management within one consistent experience.",
@@ -154,7 +211,16 @@ export const projects: Project[] = [
     ],
 
     externalUrl:
-      "https://www.figma.com/design/8a8nXYFBKrd3kjiypZt5f7/AlMosafer-Project?node-id=0-1&t=MHiUIwumdWst5OxP-1"
+      "https://www.figma.com/design/8a8nXYFBKrd3kjiypZt5f7/AlMosafer-Project?node-id=0-1&t=MHiUIwumdWst5OxP-1",
+
+    image: "/images/projects/almosafer-home.webp",
+
+    galleryImages: [
+      "/images/projects/almosafer-explore.webp",
+      "/images/projects/almosafer-ai-planner.webp",
+      "/images/projects/almosafer-ai-chat.webp",
+      "/images/projects/almosafer-booking.webp"
+    ],
   },
 
   {
@@ -228,7 +294,9 @@ export const projects: Project[] = [
       "Game Design"
     ],
     githubShowcase:
-      "https://github.com/Mohamed-Issam-1/simo-and-the-lost-crystal-showcase"
+      "https://github.com/Mohamed-Issam-1/simo-and-the-lost-crystal-showcase",
+
+    image: "/images/projects/simo-gameplay.webp"
   },
 
   {
@@ -492,47 +560,6 @@ export const projects: Project[] = [
       "https://github.com/Mohamed-Issam-1/machine-learning-course-labs"
   },
 
-  {
-    slug: "olist-mlops",
-
-    title: "Olist MLOps Pipeline",
-    titleAr: "منظومة Olist MLOps",
-
-    category: "Machine Learning / MLOps",
-    categoryAr: "تعلم الآلة / MLOps",
-
-    filter: "ai-data",
-
-    type: "End-to-End MLOps Project",
-    typeAr: "مشروع MLOps متكامل",
-
-    role: "MLOps / Machine Learning Developer",
-    roleAr: "مطور MLOps وتعلم آلة",
-
-    status: "completed",
-    priority: "strong-supporting",
-
-    description:
-      "An end-to-end MLOps system for predicting late e-commerce deliveries, covering reproducible model development, data and artifact versioning, model registry, inference APIs, containerized deployment, automated testing, CI/CD, logging, and runtime monitoring.",
-
-    descriptionAr:
-      "نظام MLOps متكامل للتنبؤ بتأخر طلبات التجارة الإلكترونية، يشمل تطوير النموذج بشكل قابل لإعادة الإنتاج، وإدارة إصدارات البيانات والـartifacts، وتسجيل النماذج، وخدمات inference عبر API، والتشغيل بالحاويات، والاختبارات الآلية، وCI/CD، والتسجيل والمراقبة التشغيلية.",
-
-    technologies: [
-      "Python",
-      "scikit-learn",
-      "FastAPI",
-      "MLflow",
-      "DVC",
-      "Docker",
-      "PostgreSQL",
-      "Great Expectations",
-      "GitHub Actions"
-    ],
-
-    github:
-      "https://github.com/Mohamed-Issam-1/Olist-MLOps"
-  },
   {
     slug: "intelligent-university-conversational-system",
 
