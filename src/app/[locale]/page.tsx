@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 
 import { Hero } from "@/components/sections/hero";
@@ -6,11 +7,29 @@ import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Learning } from "@/components/sections/learning";
 import { Contact } from "@/components/sections/contact";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{
+    locale: string;
+  }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return getPageMetadata(
+    locale,
+    "home"
+  );
+}
 
 export default async function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{
+    locale: string;
+  }>;
 }) {
   const { locale } = await params;
 

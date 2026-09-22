@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Noto_Sans_Arabic,
+} from "next/font/google";
+
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageIntro } from "@/components/layout/page-intro";
 import { routing } from "@/i18n/routing";
+import { getSiteMetadata } from "@/lib/seo";
+
 import "../globals.css";
 
 const geistSans = Geist({
@@ -26,19 +33,22 @@ const notoSansArabic = Noto_Sans_Arabic({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Mohamed Issam Qeshta | Full-Stack Web Developer",
-    template: "%s | Mohamed Issam Qeshta",
-  },
-  description:
-    "Portfolio of Mohamed Issam Qeshta, a Full-Stack Web Developer focused on modern web applications, software engineering, and AI-integrated products.",
-  authors: [{ name: "Mohamed Issam Qeshta" }],
-  creator: "Mohamed Issam Qeshta",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{
+    locale: string;
+  }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return getSiteMetadata(locale);
+}
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({
+    locale,
+  }));
 }
 
 export default async function LocaleLayout({
@@ -46,7 +56,9 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{
+    locale: string;
+  }>;
 }>) {
   const { locale } = await params;
 
@@ -56,7 +68,10 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const direction = locale === "ar" ? "rtl" : "ltr";
+  const direction =
+    locale === "ar"
+      ? "rtl"
+      : "ltr";
 
   return (
     <html

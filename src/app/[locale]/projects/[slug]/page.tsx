@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 
@@ -8,6 +9,11 @@ import {
 } from "@/data/project-case-studies";
 import { ProjectCaseStudyPage } from "@/components/projects/project-case-study-page";
 
+interface ProjectPageParams {
+  locale: string;
+  slug: string;
+}
+
 export function generateStaticParams() {
   return projectCaseStudies.map(
     (caseStudy) => ({
@@ -16,15 +22,46 @@ export function generateStaticParams() {
   );
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<ProjectPageParams>;
+}): Promise<Metadata> {
+  const {
+    locale,
+    slug,
+  } = await params;
+
+  const project = projects.find(
+    (item) => item.slug === slug
+  );
+
+  if (!project) {
+    return {};
+  }
+
+  const isArabic = locale === "ar";
+
+  return {
+    title: isArabic
+      ? project.titleAr
+      : project.title,
+
+    description: isArabic
+      ? project.descriptionAr
+      : project.description,
+  };
+}
+
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{
-    locale: string;
-    slug: string;
-  }>;
+  params: Promise<ProjectPageParams>;
 }) {
-  const { locale, slug } = await params;
+  const {
+    locale,
+    slug,
+  } = await params;
 
   setRequestLocale(locale);
 
@@ -32,7 +69,8 @@ export default async function ProjectPage({
     (item) => item.slug === slug
   );
 
-  const caseStudy = getProjectCaseStudy(slug);
+  const caseStudy =
+    getProjectCaseStudy(slug);
 
   if (!project || !caseStudy) {
     notFound();
