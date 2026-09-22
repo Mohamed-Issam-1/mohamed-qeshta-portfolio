@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 import { PageIntro } from "@/components/layout/page-intro";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -64,13 +65,14 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} antialiased`}
     >
-      <body>
+      <body id="top">
         <PageIntro />
 
         <NextIntlClientProvider>
           <ThemeProvider>
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

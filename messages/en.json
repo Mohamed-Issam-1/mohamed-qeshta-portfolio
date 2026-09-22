@@ -159,4 +159,17 @@
                          "githubShowcase":  "GitHub Showcase",
                              "openProject":  "Open project"
                          }
+,
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something meaningful.",
+    "description": "Have a project, opportunity, or collaboration in mind? You can reach me directly by email or connect with me through LinkedIn and GitHub.",
+    "linkedinValue": "Connect on LinkedIn",
+    "githubValue": "Explore my GitHub"
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "email": "Email",
+    "backToTop": "Back to top"
+  }
 }

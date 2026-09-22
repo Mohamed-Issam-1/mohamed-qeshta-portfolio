@@ -159,4 +159,17 @@
                          "githubShowcase":  "GitHub Showcase",
                              "openProject":  "فتح المشروع"
                          }
+,
+  "Contact": {
+    "eyebrow": "تواصل معي",
+    "title": "لنحوّل الفكرة إلى منتج حقيقي.",
+    "description": "إذا كان لديك مشروع أو فرصة أو فكرة للتعاون، يمكنك التواصل معي مباشرة عبر البريد الإلكتروني أو من خلال LinkedIn وGitHub.",
+    "linkedinValue": "تواصل عبر LinkedIn",
+    "githubValue": "استعرض GitHub"
+  },
+  "Footer": {
+    "rights": "جميع الحقوق محفوظة.",
+    "email": "البريد الإلكتروني",
+    "backToTop": "العودة إلى الأعلى"
+  }
 }

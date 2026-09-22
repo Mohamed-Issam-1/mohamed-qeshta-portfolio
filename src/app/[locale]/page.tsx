@@ -5,6 +5,7 @@ import { SelectedWork } from "@/components/sections/selected-work";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Learning } from "@/components/sections/learning";
+import { Contact } from "@/components/sections/contact";
 
 export default async function HomePage({
   params,
@@ -22,6 +23,7 @@ export default async function HomePage({
       <About />
       <Skills />
       <Learning />
+      <Contact />
     </main>
   );
 }
