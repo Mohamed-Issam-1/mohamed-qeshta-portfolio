@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 
+export const SITE_URL =
+  "https://mohamed-qeshta-portfolio.netlify.app";
+
+export const SITE_NAME =
+  "Mohamed Issam Qeshta";
+
 type StaticPage =
   | "home"
   | "projects"
@@ -20,12 +26,14 @@ const pages: Record<
 > = {
   home: {
     en: {
-      title: "Mohamed Issam Qeshta | Full-Stack Web Developer",
+      title:
+        "Mohamed Issam Qeshta | Full-Stack Web Developer",
       description:
         "Portfolio of Mohamed Issam Qeshta, a Full-Stack Web Developer building modern web applications, backend systems, software projects, and AI-integrated products.",
     },
     ar: {
-      title: "محمد عصام قشطة | مطور ويب Full-Stack",
+      title:
+        "محمد عصام قشطة | مطور ويب Full-Stack",
       description:
         "الموقع الشخصي لمحمد عصام قشطة، مطور ويب Full-Stack يعمل على بناء تطبيقات ويب حديثة وأنظمة Backend ومشاريع برمجية ومنتجات متكاملة مع الذكاء الاصطناعي.",
     },
@@ -71,32 +79,124 @@ const pages: Record<
   },
 };
 
+const pagePaths: Record<StaticPage, string> = {
+  home: "",
+  projects: "/projects",
+  learning: "/learning",
+  resume: "/resume",
+};
+
+export function getLocalizedPath(
+  locale: string,
+  path = ""
+) {
+  const normalizedPath =
+    path === "/" ? "" : path;
+
+  if (locale === "ar") {
+    return `/ar${normalizedPath}`;
+  }
+
+  return normalizedPath || "/";
+}
+
+export function getLanguageAlternates(
+  path = ""
+) {
+  return {
+    en: getLocalizedPath("en", path),
+    ar: getLocalizedPath("ar", path),
+    "x-default": getLocalizedPath("en", path),
+  };
+}
+
+export function getFullTitle(
+  locale: string,
+  title: string
+) {
+  return locale === "ar"
+    ? `${title} | محمد عصام قشطة`
+    : `${title} | Mohamed Issam Qeshta`;
+}
+
 export function getSiteMetadata(
   locale: string
 ): Metadata {
   const isArabic = locale === "ar";
 
+  const defaultTitle = isArabic
+    ? "محمد عصام قشطة | مطور ويب Full-Stack"
+    : "Mohamed Issam Qeshta | Full-Stack Web Developer";
+
+  const description = isArabic
+    ? "الموقع الشخصي لمحمد عصام قشطة، مطور ويب Full-Stack يعمل على تطوير تطبيقات ومنتجات رقمية متكاملة."
+    : "Portfolio of Mohamed Issam Qeshta, a Full-Stack Web Developer building modern applications and complete digital products.";
+
   return {
+    metadataBase: new URL(SITE_URL),
+
+    applicationName: SITE_NAME,
+
     title: {
-      default: isArabic
-        ? "محمد عصام قشطة | مطور ويب Full-Stack"
-        : "Mohamed Issam Qeshta | Full-Stack Web Developer",
+      default: defaultTitle,
       template: isArabic
         ? "%s | محمد عصام قشطة"
         : "%s | Mohamed Issam Qeshta",
     },
 
-    description: isArabic
-      ? "الموقع الشخصي لمحمد عصام قشطة، مطور ويب Full-Stack يعمل على تطوير تطبيقات ومنتجات رقمية متكاملة."
-      : "Portfolio of Mohamed Issam Qeshta, a Full-Stack Web Developer building modern applications and complete digital products.",
+    description,
 
     authors: [
       {
-        name: "Mohamed Issam Qeshta",
+        name: SITE_NAME,
+        url: SITE_URL,
       },
     ],
 
-    creator: "Mohamed Issam Qeshta",
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      title: defaultTitle,
+      description,
+      locale: isArabic
+        ? "ar_PS"
+        : "en_US",
+      alternateLocale: isArabic
+        ? ["en_US"]
+        : ["ar_PS"],
+      images: [
+        {
+          url: "/icon.png",
+          width: 512,
+          height: 512,
+          alt: "Mohamed Issam Qeshta portfolio",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary",
+      title: defaultTitle,
+      description,
+      images: ["/icon.png"],
+    },
+
+    category: "technology",
   };
 }
 
@@ -104,17 +204,81 @@ export function getPageMetadata(
   locale: string,
   page: StaticPage
 ): Metadata {
-  const language = locale === "ar" ? "ar" : "en";
-  const metadata = pages[page][language];
+  const language =
+    locale === "ar"
+      ? "ar"
+      : "en";
+
+  const metadata =
+    pages[page][language];
+
+  const path = pagePaths[page];
+
+  const canonical =
+    getLocalizedPath(
+      locale,
+      path
+    );
+
+  const title =
+    page === "home"
+      ? metadata.title
+      : getFullTitle(
+          locale,
+          metadata.title
+        );
+
+  const isArabic =
+    locale === "ar";
 
   return {
     title:
       page === "home"
         ? {
-            absolute: metadata.title,
+            absolute:
+              metadata.title,
           }
         : metadata.title,
 
-    description: metadata.description,
+    description:
+      metadata.description,
+
+    alternates: {
+      canonical,
+      languages:
+        getLanguageAlternates(path),
+    },
+
+    openGraph: {
+      type: "website",
+      url: canonical,
+      siteName: SITE_NAME,
+      title,
+      description:
+        metadata.description,
+      locale: isArabic
+        ? "ar_PS"
+        : "en_US",
+      alternateLocale: isArabic
+        ? ["en_US"]
+        : ["ar_PS"],
+      images: [
+        {
+          url: "/icon.png",
+          width: 512,
+          height: 512,
+          alt:
+            "Mohamed Issam Qeshta portfolio",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary",
+      title,
+      description:
+        metadata.description,
+      images: ["/icon.png"],
+    },
   };
 }

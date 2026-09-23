@@ -8,6 +8,12 @@ import {
   projectCaseStudies,
 } from "@/data/project-case-studies";
 import { ProjectCaseStudyPage } from "@/components/projects/project-case-study-page";
+import {
+  getFullTitle,
+  getLanguageAlternates,
+  getLocalizedPath,
+  SITE_NAME,
+} from "@/lib/seo";
 
 interface ProjectPageParams {
   locale: string;
@@ -33,23 +39,85 @@ export async function generateMetadata({
   } = await params;
 
   const project = projects.find(
-    (item) => item.slug === slug
+    (item) =>
+      item.slug === slug
   );
 
   if (!project) {
     return {};
   }
 
-  const isArabic = locale === "ar";
+  const isArabic =
+    locale === "ar";
+
+  const title = isArabic
+    ? project.titleAr
+    : project.title;
+
+  const description =
+    isArabic
+      ? project.descriptionAr
+      : project.description;
+
+  const path =
+    `/projects/${slug}`;
+
+  const canonical =
+    getLocalizedPath(
+      locale,
+      path
+    );
+
+  const socialImage =
+    project.image ??
+    "/icon.png";
 
   return {
-    title: isArabic
-      ? project.titleAr
-      : project.title,
+    title,
 
-    description: isArabic
-      ? project.descriptionAr
-      : project.description,
+    description,
+
+    alternates: {
+      canonical,
+      languages:
+        getLanguageAlternates(path),
+    },
+
+    openGraph: {
+      type: "website",
+      url: canonical,
+      siteName: SITE_NAME,
+      title:
+        getFullTitle(
+          locale,
+          title
+        ),
+      description,
+      locale: isArabic
+        ? "ar_PS"
+        : "en_US",
+      alternateLocale:
+        isArabic
+          ? ["en_US"]
+          : ["ar_PS"],
+      images: [
+        {
+          url: socialImage,
+          alt: `${title} project preview`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title:
+        getFullTitle(
+          locale,
+          title
+        ),
+      description,
+      images: [socialImage],
+    },
   };
 }
 
@@ -65,14 +133,21 @@ export default async function ProjectPage({
 
   setRequestLocale(locale);
 
-  const project = projects.find(
-    (item) => item.slug === slug
-  );
+  const project =
+    projects.find(
+      (item) =>
+        item.slug === slug
+    );
 
   const caseStudy =
-    getProjectCaseStudy(slug);
+    getProjectCaseStudy(
+      slug
+    );
 
-  if (!project || !caseStudy) {
+  if (
+    !project ||
+    !caseStudy
+  ) {
     notFound();
   }
 
